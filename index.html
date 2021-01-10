@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnOtter Messaging Program</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="settings.css" />
+    <base href="./" />
+  </head>
+  <body>
+    <div class="sidebar"></div>
+    <div class="content">
+      <div id="settings" class="content-frame">
+        <div class="section" id="SiteList">
+          <div class="listElement">
+            <button onclick="createSiteOption('','')">Add Site</button>
+            <button onclick="applySettings()">Apply Settings</button>
+          </div>
+        </div>
+        <script src="./settings.js"></script>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

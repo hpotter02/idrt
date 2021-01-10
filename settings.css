@@ -1,0 +1,62 @@
+.section {
+  border-radius: 0.5rem;
+  background-color: #444444;
+  margin: 0.5rem 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.section:first-of-type {
+  margin-top: 2rem;
+}
+
+body {
+  background-color: #222222;
+  font-family: sans-serif;
+}
+
+.listElement {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #666666;
+  margin: 1rem 0rem;
+}
+
+.listElement:first-of-type {
+  margin-top: 0rem;
+}
+.listElement:last-of-type {
+  margin-bottom: 0rem;
+}
+
+.listElement > form {
+  display: grid;
+  grid-template-columns: auto auto 2rem;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: #666666;
+  outline: none;
+  border-bottom: solid #222222 0.1rem;
+  margin: 0 1rem;
+}
+input[type="text"]::placeholder {
+  grid-column: 2;
+  color: #222222;
+  font-style: italic;
+}
+input[name="Icon"] {
+  left: 50%;
+}
+.deleteButton {
+  grid-column: 3;
+  background-color: #444444;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  transition: all 250ms;
+}
+.deleteButton:hover {
+  background-color: #888888;
+}

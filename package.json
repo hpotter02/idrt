@@ -1,0 +1,15 @@
+{
+  "name": "AnOMP",
+  "version": "1.0.0",
+  "description": "AnOtter Messaging Program",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "hpotter02",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.1"
+  }
+}
