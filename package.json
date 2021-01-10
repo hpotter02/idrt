@@ -1,14 +1,14 @@
 {
-  "name": "AnOMP",
+  "name": "idrt",
   "version": "1.0.0",
-  "description": "AnOtter Messaging Program",
+  "description": "I didn't rebuild tabs",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
   "keywords": [],
   "author": "hpotter02",
-  "license": "ISC",
+  "license": "GPLv3",
   "devDependencies": {
     "electron": "^11.1.1"
   }
