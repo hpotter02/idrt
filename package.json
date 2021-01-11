@@ -9,6 +9,7 @@
     "dist-win": "electron-builder -w",
     "dist-linux": "electron-builder -l"
   },
+  "homepage": "https://github.com/hpotter02/idrt",
   "keywords": [],
   "author": {
     "email": "r.hackhofer@otter.farm",
