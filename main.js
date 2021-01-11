@@ -9,7 +9,7 @@ function createWindow() {
             webviewTag: true,
         }
     })
-    mainWindow.removeMenu()
+    //mainWindow.removeMenu()
     mainWindow.webContents.session.webRequest.onHeadersReceived((details, callback) => {
         callback({ responseHeaders: Object.fromEntries(Object.entries(details.responseHeaders).filter(header => !/x-frame-options/i.test(header[0]))) });
     });

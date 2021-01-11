@@ -60,26 +60,26 @@ var settings = {}
 
 function readSettings() {
     fs.readFile("settings.json", (e, d) => {
+        if (e != "") {
+            document.getElementById("settings").classList.add("active-content")
+            return
+        }
         settings = JSON.parse(d)
         settings.sites.forEach(site => {
             createSiteOption(site.URL, site.icon)
             addSite(site.URL, site.icon)
         });
 
-        addSite("settings", "cog-solid.svg", "bottom")
     })
+    addSite("settings", "cog-solid.svg", "bottom")
 }
 
 function writeSettings() {
     fs.writeFile("settings.json", JSON.stringify(settings, null, 4), () => {
-        console.log("done writing")
     })
 }
 
 readSettings()
-
-settingsCreated = false
-document.onreadystatechange = () => { settingsCreated || createFrame("settings.html") };
 
 function Prompt() {
     //TODO
