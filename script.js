@@ -80,7 +80,3 @@ function writeSettings() {
 }
 
 readSettings()
-
-function Prompt() {
-    //TODO
-}
