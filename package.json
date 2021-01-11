@@ -4,12 +4,27 @@
   "description": "I didn't rebuild tabs",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "hpotter02",
   "license": "GPLv3",
   "devDependencies": {
-    "electron": "^11.1.1"
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "idrt.app",
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "pacman",
+        "deb"
+      ]
+    }
   }
 }
