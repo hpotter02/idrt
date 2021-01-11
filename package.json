@@ -15,10 +15,14 @@
     "email": "r.hackhofer@otter.farm",
     "name": "hpotter02"
   },
-  "license": "GPLv3",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "electron": "^11.1.1",
     "electron-builder": "^22.9.1"
+  },
+  "repository": {
+    "url": "git://github.com/hpotter02/idrt.git",
+    "type": "git"
   },
   "build": {
     "appId": "idrt.app",
