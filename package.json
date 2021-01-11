@@ -1,6 +1,6 @@
 {
   "name": "idrt",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "I didn't rebuild tabs",
   "main": "main.js",
   "scripts": {
