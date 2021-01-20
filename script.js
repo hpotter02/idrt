@@ -58,10 +58,15 @@ function addSite(url, imgUrl, classNameImg) {
 }
 
 var settings = {}
+var confFile = require('os').homedir() + "/.config/idrt/settings.json"
+if (process.platform === "win32") {
+    confFile = require('os').homedir() + "\\.config\\idrt\\settings.json"
+}
 
 function readSettings() {
-    fs.readFile(require('os').homedir() + "/.config/idrt/settings.json", (e, d) => {
-        if (e != "") {
+    fs.readFile(confFile, (e, d) => {
+        if (e != null) {
+            console.error(e)
             document.getElementById("settings").classList.add("active-content")
             return
         }
@@ -76,7 +81,7 @@ function readSettings() {
 }
 
 function writeSettings() {
-    fs.writeFile(require('os').homedir() + "/.config/idrt/settings.json", JSON.stringify(settings, null, 4), () => {
+    fs.writeFile(confFile, JSON.stringify(settings, null, 4), () => {
     })
 }
 console.log(require('os').homedir() + "/.config/idrt/settings.json")
