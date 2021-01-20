@@ -1,4 +1,5 @@
 var fs = require('fs')
+const { app } = require('electron');
 
 var sidebar = document.getElementsByClassName("sidebar")[0]
 var content = document.getElementsByClassName("content")[0]
@@ -59,7 +60,7 @@ function addSite(url, imgUrl, classNameImg) {
 var settings = {}
 
 function readSettings() {
-    fs.readFile("settings.json", (e, d) => {
+    fs.readFile(require('os').homedir() + "/.config/idrt/settings.json", (e, d) => {
         if (e != "") {
             document.getElementById("settings").classList.add("active-content")
             return
@@ -75,8 +76,8 @@ function readSettings() {
 }
 
 function writeSettings() {
-    fs.writeFile("settings.json", JSON.stringify(settings, null, 4), () => {
+    fs.writeFile(require('os').homedir() + "/.config/idrt/settings.json", JSON.stringify(settings, null, 4), () => {
     })
 }
-
+console.log(require('os').homedir() + "/.config/idrt/settings.json")
 readSettings()
