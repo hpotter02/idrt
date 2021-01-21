@@ -19,7 +19,13 @@ function getFavicon() {
 
 
 function swapContent(id) {
-    document.getElementsByClassName("active-content")[0].className = "content-frame"
+    try {
+
+        document.getElementsByClassName("active-content")[0].className = "content-frame"
+    }
+    catch {
+        console.log("oopsie woopsie")
+    }
     sitelist[id].className = "content-frame active-content"
 }
 
@@ -71,6 +77,9 @@ function readSettings() {
             return
         }
         settings = JSON.parse(d)
+        if (d.sites.length === 0) {
+            document.getElementById("settings").classList.add("active-content")
+        }
         settings.sites.forEach(site => {
             createSiteOption(site.URL, site.icon)
             addSite(site.URL, site.icon)
