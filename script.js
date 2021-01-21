@@ -77,9 +77,6 @@ function readSettings() {
             return
         }
         settings = JSON.parse(d)
-        if (d.sites.length === 0) {
-            document.getElementById("settings").classList.add("active-content")
-        }
         settings.sites.forEach(site => {
             createSiteOption(site.URL, site.icon)
             addSite(site.URL, site.icon)
